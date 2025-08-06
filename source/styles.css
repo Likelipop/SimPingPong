@@ -1,0 +1,37 @@
+body {
+    background-color: #3a9bf0; /* Màu nền trời xanh nhạt */
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Ẩn thanh cuộn */
+}
+
+.monster {
+    width: 300px;
+    height: 350px;
+    background-color: #5b1d74; /* Màu tím */
+    border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
+    position: relative; /* Cần cho việc định vị các bộ phận bên trong */
+}
+
+.eye {
+    width: 150px;
+    height: 150px;
+    background-color: #fff; /* Màu trắng cho mắt */
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    display: flex;
+}
+.pupil{
+    width: 50px;
+    height:50px;
+    background-color:black;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
