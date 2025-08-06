@@ -9,29 +9,48 @@ body {
 }
 
 .monster {
-    width: 300px;
-    height: 350px;
+    width: 400px;
+    height: 450px;
     background-color: #5b1d74; /* Màu tím */
     border-radius: 50% 50% 45% 45% / 60% 60% 40% 40%;
     position: relative; /* Cần cho việc định vị các bộ phận bên trong */
 }
 
-.eye {
-    width: 150px;
-    height: 150px;
+.lefteye {
+    width: 100px;
+    height: 100px;
     background-color: #fff; /* Màu trắng cho mắt */
     border-radius: 50%;
     position: absolute;
     top: 50px;
-    left: 50px;
+    left: 60px;
     display: flex;
 }
-.pupil{
-    width: 50px;
-    height:50px;
-    background-color:black;
+.righteye {
+    width: 100px;
+    height: 100px;
+    background-color: #fff; /* Màu trắng cho mắt */
     border-radius: 50%;
     position: absolute;
     top: 50px;
-    left: 50px;
+    right: 60px;
+    display: flex;
+}
+.leftpupil{
+    width: 30px;
+    height:30px;
+    background-color:black;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.rightpupil{
+    width: 30px;
+    height:30px;
+    background-color:black;
+    border-radius: 50%;
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
