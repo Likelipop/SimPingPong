@@ -1,0 +1,100 @@
+/*
+    * This is the CSS section.
+    * We'll use this to style our HTML elements to make them
+    * look like a ping pong game.
+    */
+
+/* Basic styles for the entire page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2c3e50; /* A dark background color */
+    font-family: sans-serif;
+    overflow: hidden; /* Prevent scrollbars */
+}
+
+/* The main container for the game court */
+.court {
+    width: 800px;
+    height: 400px;
+    background-color: #34495e; /* Court background color */
+    border: 10px solid #ecf0f1; /* White border for the court */
+    position: relative; /* All child elements will be positioned relative to this */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Shadow for a 3D effect */
+}
+
+/* The white net in the middle of the court */
+.net {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 100%;
+    background-color: #ecf0f1;
+}
+
+/* The left and right paddles */
+.paddle {
+    position: absolute;
+    width: 15px;
+    height: 80px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Position the left paddle */
+.paddle.left {
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Position the right paddle */
+.paddle.right {
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* The ball itself */
+.ball {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #f39c12; /* A bright orange color */
+    border-radius: 50%; /* Makes the element a perfect circle */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    
+    /*
+        * This is the key part for making it "move" without JavaScript.
+        * We'll use a CSS animation to make it appear to bounce back and forth.
+        */
+    animation: bounce 4s infinite linear;
+}
+
+/* This is the animation definition for the ball */
+@keyframes bounce {
+    0% {
+        transform: translate(-50%, -50%) translateX(0px);
+    }
+    25% {
+        transform: translate(-50%, -50%) translateX(350px) translateY(-50px);
+    }
+    50% {
+        transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    }
+    75% {
+        transform: translate(-50%, -50%) translateX(-350px) translateY(50px);
+    }
+    100% {
+        transform: translate(-50%, -50%) translateX(0px) translateY(0px);
+    }
+}
